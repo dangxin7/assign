@@ -1,0 +1,1 @@
+{dede:img text='' width='562' height='274'} /shibo/uploads/180611/1-1P611152435b3.jpg {/dede:img}

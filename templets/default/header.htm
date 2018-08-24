@@ -1,0 +1,150 @@
+  <!-- 导航 -->
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jq22.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-latest.min.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jq22.js"></script>
+<!-- end -->
+  <div class="inner">
+  <nav>
+  	<!-- logo -->
+  	<div class="nav-logo">
+  		<a href="###"><img src="{dede:global.cfg_templets_skin/}/images/logo.jpg" alt=""></a>
+  	</div>
+   <div id='cssmenu' style="z-index: 9999;" act="[field:ID /]">
+    <ul>
+       <li id="index2"><a href='/'>网站首页</a></li>
+       <li class='has-sub' id="about">{dede:type typeid='1'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+          <ul>
+            {dede:channel type='son' typeid='1' titlelen='30'}
+               <li class='has-sub'><a href="[field:typeurl/]">[field:typename/]</a></li>
+             {/dede:channel}
+          </ul>
+       </li>
+       <li class='has-sub' id="news">{dede:type typeid='6'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+          <ul>
+            {dede:channel type='son' typeid='6' titlelen='30'}
+               <li class='has-sub'><a href="[field:typeurl/]">[field:typename/]</a></li>
+             {/dede:channel}
+          </ul>
+       </li>
+
+       <li class='has-sub' id="product">{dede:type typeid='10'}<a href="#">[field:typename/]</a>{/dede:type}
+          <ul>
+
+               <li class='has-sub aft'>{dede:type typeid='11'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+               <ul>
+                  {dede:arclist titlelen='42' row='15' typeid='27'}
+                  <li><a href="[field:arcurl /]">[field:title/]</a></li>
+                 {/dede:arclist}
+               </ul>
+               </li>
+             
+               <li class='has-sub aft'>{dede:type typeid='11'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+               <ul>
+                  {dede:arclist titlelen='42' row='15' typeid='11'}
+                  <li><a href="[field:arcurl /]">[field:title/]</a></li>
+                 {/dede:arclist}
+               </ul>
+               </li>
+
+               <li class='has-sub aft'>{dede:type typeid='29'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+               <ul>
+                  {dede:arclist titlelen='42' row='15' typeid='11'}
+                  <li><a href="[field:arcurl /]">[field:title/]</a></li>
+                 {/dede:arclist}
+               </ul>
+               </li>
+             
+          </ul>
+       </li>
+       <li class='has-sub' id="anw">{dede:type typeid='12'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+          <ul>
+            {dede:channel type='son' typeid='12' titlelen='30'}
+               <li class='has-sub'><a href="[field:typeurl/]">[field:typename/]</a></li>
+             {/dede:channel}
+          </ul>
+       </li>
+        
+       <li class='has-sub' id="pople">{dede:type typeid='19'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+          <ul>
+            {dede:channel type='son' typeid='19' titlelen='30'}
+               <li class='has-sub'><a href="[field:typeurl/]">[field:typename/]</a></li>
+             {/dede:channel}
+          </ul>
+       </li>
+       <li class='has-sub' id="pho">{dede:type typeid='23'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+          <ul>
+            {dede:channel type='son' typeid='23' titlelen='30'}
+               <li class='has-sub'><a href="[field:typeurl/]">[field:typename/]</a></li>
+             {/dede:channel}
+          </ul>
+       </li>
+    </ul>
+  </div>
+  {dede:type}<div id="menuId" class="[field:ID /]"> </div>{/dede:type}
+
+  <script>
+      $(function(){
+          var menuId = parseInt($('#menuId').attr('class'));
+          var about = [1,30,31,32,33];
+          var news = [10,11,27,29];
+          var product = [19,20,21,22];
+          var anw = [1,30,31,32,33];
+          var pople = [23,24,25,26];
+          var pho = [12,13,14,15,17,18];
+          console.log(menuId);
+          if ($.inArray(menuId, about) > 0)  {
+            $("#about").addClass("active");
+          } else if($.inArray(menuId, news) >0) {
+            $("#news").addClass("active");
+          } else if ($.inArray(menuId, product) > 0) {
+            $("#product").addClass("active");
+          } else if ($.inArray(menuId, pople) > 0) {
+            $("#pople").addClass("active");
+          }else if ($.inArray(menuId, pho) > 0){
+            $("#pho").addClass("active");
+          } else {
+            $("#index2").addClass("active");
+          }
+      })
+  </script>
+  </nav>
+</div>
+<div class="container-fild" style="z-index: 9999;">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                    <img src="{dede:global.cfg_templets_skin/}/images/banner.jpg" alt="Third slide" style="width: 100%;">
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+                    <img src="{dede:global.cfg_templets_skin/}/images/banner.jpg" alt="Third slide" style="width: 100%;">
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+                    <img src="{dede:global.cfg_templets_skin/}/images/banner.jpg" alt="Third slide" style="width: 100%;">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div> 

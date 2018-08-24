@@ -1,0 +1,1 @@
+<a href="[field:typelink /]"><i class="iconfont">&#x33;</i>[field:typename/]</a>

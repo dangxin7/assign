@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link type="text/css" media="screen" href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/nav.css">
+<link href="{dede:global.cfg_templets_skin/}/css/banner.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap/css/bootstrap.min.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript" language="javascript">  
+
+
+//验证码    
+
+
+function changeAuthCode() {    
+
+
+   var num = new Date().getTime();  
+
+
+   var rand = Math.round(Math.random() * 10000);  
+
+
+   num = num + rand;  
+
+
+   $('#ver_code').css('visibility','visible');  
+
+
+   if ($("#vdimgck")[0]) {  
+
+       $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num; 
+
+   }  
+   return false;      
+}  
+</script>  
+
+<body class="custom-background">
+ {dede:include filename='default/header.htm'/}
+<div class="breadcrumb inner">
+  <div class="crumb-box">
+    <div itemscope itemtype="/" id="crumbs">{dede:field name="position"/}</div>
+  </div>
+</div>
+<div class="inner container">
+  <div class="column-fluid">
+    <div class="content">
+      <article class="post">
+        <h1 class="page-title">{dede:field name='typename' function="GetTypeName（@me）"/}</h1>
+        <div class="entry">
+          <form class="form-horizontal" action="/tuoxin/plus/diy.php" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="1" />
+            <input type="hidden" name="do" value="2" />
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">您的姓名：</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="您的姓名" name='name'>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">您的电话号：</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPassword3" placeholder="填写电话号" name="phone">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword4" class="col-sm-2 control-label">您的留言：</label>
+                <div class="col-sm-10">
+                <textarea name='message' id="inputPassword4" class="form-control" placeholder="填写留言"  ></textarea>
+                </div>
+              </div>
+               <div class="form-group">
+                <label for="inputPassword4" class="col-sm-2 control-label">验证码:</label>
+                <div class="col-sm-10">
+                  <input name="validate" type="text" id="vdcode" style="text-transform:uppercase; border: 1px solid #CCCCCC" size="8"/>    
+                <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/tuoxin/include/vdimgck.php"/>    
+                <a href="javascript:vide(-1);" onClick="changeAuthCode();">看不清？ </a>  
+                </div>
+              </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <input type="hidden" name="dede_fields" value="name,text;phone,int;message,multitext" />
+                  <input type="hidden" name="dede_fieldshash" value="216dc2a32c0c821d36a57c442e3d084b " /> 
+                  <input type="submit" name="submit" value="提 交" class="btn btn-primary" />
+                  &nbsp;
+                  <input type="reset" name="reset" value="重 置" class="btn btn-default" />
+                  </div>
+                </div>
+            </form>
+        </div>
+      </article>
+    </div>
+  </div>
+  {dede:include filename='default/left.htm'/}
+  <div class="clearfix"></div>
+</div>
+ {dede:include filename='default/footer.htm'/}
+</body>
+</html>

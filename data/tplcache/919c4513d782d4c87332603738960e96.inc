@@ -1,0 +1,1 @@
+<li><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}<br /><span style="font-size: 10px;">{dede:field.seotitle /}</span></a></li>

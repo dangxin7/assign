@@ -1,0 +1,1 @@
+<h3><a href="[field:typelink /]">[field:typename/]<br /><span>{dede:field.seotitle /}</span></a></h3>

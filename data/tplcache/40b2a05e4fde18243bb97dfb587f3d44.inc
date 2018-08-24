@@ -1,0 +1,1 @@
+<a href="[field:arcurl/]"><li class="col-xs-6 col-md-5"><span style="color: #2e7a00; font-size: 16px;text-align: center;">[field:title/]</span><img src="[field:litpic/]" alt="业绩" class="img-responsive" style="height: 150px; width: 220px;"><span style="background-color:# "></span></li></a>

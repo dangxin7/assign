@@ -1,0 +1,1 @@
+[field:typename/]<br /><span style="font-size: 10px;">[field:seotitle /]</span>

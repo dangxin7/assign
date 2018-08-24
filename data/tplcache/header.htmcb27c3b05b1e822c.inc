@@ -1,0 +1,42 @@
+<?php
+$z[0]=Array("global","",2054,2086);
+$z[0][4]=array();
+$z[0][4]['name']="cfg_templets_skin";
+$z[1]=Array("type","[field:typename/]",2458,2509);
+$z[1][4]=array();
+$z[1][4]['typeid']="1";
+$z[2]=Array("channel","\r\n          <li><a href=\"[field:typeurl/]\">[field:typename/]</a></li>\r\n          ",2600,2746);
+$z[2][4]=array();
+$z[2][4]['type']="son";
+$z[2][4]['typeid']="1";
+$z[2][4]['titlelen']="30";
+$z[3]=Array("type","[field:typename/]",2794,2845);
+$z[3][4]=array();
+$z[3][4]['typeid']="4";
+$z[4]=Array("channel","\r\n          <li><a href=\"[field:typeurl/]\">[field:typename/]</a></li>\r\n          ",2936,3082);
+$z[4][4]=array();
+$z[4][4]['type']="son";
+$z[4][4]['typeid']="4";
+$z[4][4]['titlelen']="30";
+$z[5]=Array("type","[field:typename/]",3130,3182);
+$z[5][4]=array();
+$z[5][4]['typeid']="10";
+$z[6]=Array("channel","\r\n          <li><a href=\"[field:typeurl/]\">[field:typename/]</a></li>\r\n          ",3273,3420);
+$z[6][4]=array();
+$z[6][4]['type']="son";
+$z[6][4]['typeid']="10";
+$z[6][4]['titlelen']="30";
+$z[7]=Array("type","[field:typename/]",3468,3520);
+$z[7][4]=array();
+$z[7][4]['typeid']="20";
+$z[8]=Array("channel","\r\n          <li><a href=\"[field:typeurl/]\">[field:typename/]</a></li>\r\n          ",3611,3758);
+$z[8][4]=array();
+$z[8][4]['type']="son";
+$z[8][4]['typeid']="20";
+$z[8][4]['titlelen']="30";
+$z[9]=Array("channelartlist","\r\n        <li><a href=\"{dede:field name='typeurl'/}\">{dede:field name='typename'/}<br /><span style=\"font-size: 10px;\">{dede:field.seotitle /}</span></a></li>\r\n        ",3794,4032);
+$z[9][4]=array();
+$z[9][4]['row']="3";
+$z[9][4]['typeid']="17,18,19";
+
+?>

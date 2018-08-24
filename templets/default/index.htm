@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">    
+<link type="text/css" media="screen" href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/nav.css">
+<link href="{dede:global.cfg_templets_skin/}/css/banner.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap/css/bootstrap.min.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+{dede:include filename='default/header.htm'/}
+<div class="inner container">
+  <section class="row-fluid radius features fadein">
+     <div class="f1left">
+     	<h4><span><a href="#">更多<img src="{dede:global.cfg_templets_skin/}/images/icon.jpg"></a></span>新闻中心&nbsp;<i>news</i></h4>
+        <div class="newpic"><img src="{dede:global.cfg_templets_skin/}/images/newspic.jpg"><dl>新闻标题新闻标题新闻标题</dl></div>
+        <ul>
+          {dede:arclist typeid="6" row=5 infolen='230'}  
+         	  <li><a href="[field:arcurl/]"><span>[field:pubdate function='strftime("%Y/%m/%d",@me)'/]</span>[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+     </div>
+     <div class="f1right">
+     <h4><span><a href="#">更多<img src="{dede:global.cfg_templets_skin/}/images/icon.jpg"></a></span>关于拓新&nbsp;<i>about</i></h4>
+     <P><img src="{dede:global.cfg_templets_skin/}/images/sp.jpg"></P>
+     </div>
+  </section>
+  <section class="row-fluid news picScroll-left" >
+   <div class="hd">
+				<a class="next"></a>
+				
+				<a class="prev"></a>
+			
+			</div>
+    <section class="row-fluid pic-fluid inner bd">
+      <h2>产品中心&nbsp;product</h2>
+     
+      <ul class="piclist piclist-col4">
+      {dede:arclist typeid="10" row=5 infolen='230'}  
+        <li> <a href="[field:arcurl/]" title="[field:title/]">
+          <div style="visibility: visible;" class="folio-thumb fadeInLeft wow animated">
+            <div class="mediaholder"><img src="[field:litpic/]" alt="[field:title/]" class="thumb"/></div>
+            <div class="opacity-pic"></div>
+          </div>
+          <h3>[field:title/]</h3>
+          </a></li>
+        {/dede:arclist}
+      </ul>
+   <script type="text/javascript">
+      
+		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,trigger:"click"});
+		</script>
+    </section>
+    
+    
+  </section>
+  
+</div>
+﻿{dede:include filename='default/footer.htm'/}
+
+</body>
+</html>

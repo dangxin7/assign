@@ -1,0 +1,1 @@
+<li style="background: url([field:litpic/]) 50% 50% no-repeat;"><!--<img src="[field:litpic/]" alt="banner">--></li>

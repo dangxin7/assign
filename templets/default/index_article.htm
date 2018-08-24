@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link type="text/css" media="screen" href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/nav.css">
+<link href="{dede:global.cfg_templets_skin/}/css/banner.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap/css/bootstrap.min.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="custom-background">
+ {dede:include filename='default/header.htm'/}
+<div class="breadcrumb inner">
+  <div class="crumb-box">
+    <div itemscope itemtype="/" id="crumbs">{dede:field name="position"/}</div>
+  </div>
+</div>
+<div class="inner container">
+  <div class="column-fluid">
+    <div class="content">
+      <article class="post">
+        <h1 class="page-title">{dede:field name='typename' function="GetTypeName（@me）"/}</h1>
+        <div class="entry">
+          {dede:field.content/}
+        </div>
+      </article>
+    </div>
+  </div>
+  {dede:include filename='default/left.htm'/}
+
+  <div class="clearfix"></div>
+</div>
+ {dede:include filename='default/footer.htm'/}
+
+</body>
+</html>

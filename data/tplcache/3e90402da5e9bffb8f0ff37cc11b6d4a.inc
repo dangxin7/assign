@@ -1,0 +1,1 @@
+<a href="[field:typelink /]">[field:typename/]<i class="bangong_zt">&#xe646;</i></a>

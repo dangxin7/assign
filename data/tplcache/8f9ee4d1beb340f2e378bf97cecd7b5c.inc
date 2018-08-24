@@ -1,0 +1,1 @@
+<a href="[field:typelink/]"><span class="col-md-1">+ more</span></a>

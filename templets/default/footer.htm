@@ -1,0 +1,22 @@
+<footer class="footer">
+  <div class="inner">
+    <div class="footer_lf">
+    	<ul>
+        {dede:channelartlist row='9' typeid='top'}
+            <li>
+                <a href="{dede:field name='typeurl'/}" style="color: #fff;" ><b>{dede:field name='typename'/}</b></a>
+                <ul>
+                    {dede:channel type='son' noself='true'} 
+                    <li><a href="[field:typelink/]" style="color: #666">[field:typename/]</a></li>
+                    {/dede:channel} 
+                </ul>
+            </li>
+        {/dede:channelartlist}
+        </ul>
+    </div>
+    <div class="footer_rg">
+    	<img src="{dede:global.cfg_templets_skin/}/images/ewm.jpg"><br>全国服务热线：0416-123456
+    </div>
+  </div>
+  <div class="copyright">地址：辽宁省锦州市辽宁省锦州市**路&nbsp;&nbsp;&nbsp;&nbsp;备案号辽123456号<br>copyright©版权所有辽宁拓新电力电子有限公司&nbsp;&nbsp;&nbsp;&nbsp;技术支持：**网络公司</div>
+</footer>

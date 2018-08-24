@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link type="text/css" media="screen" href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/nav.css">
+<link href="{dede:global.cfg_templets_skin/}/css/banner.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap/css/bootstrap.min.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="custom-background">
+
+ {dede:include filename='default/header.htm'/}
+
+<div class="breadcrumb inner">
+  <div class="crumb-box">
+    <div itemscope itemtype="/" id="crumbs">{dede:field name="position"/}</div>
+  </div>
+</div>
+<div class="inner container">
+  <div class="column-fluid">
+    <div class="content">
+      <article class="post">
+        <h1 class="post-title">{dede:field.title/}</h1>
+        <p class="postmeta"><span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</span>
+          <span>点击量：<span id="clicksArea"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次</span></span></p>
+        <div class="entry">
+            {dede:field.body/}
+        </div>
+        <div class="share">
+          <!--百度分享代码-->
+        </div>
+        <div class="clearfix"></div>
+        <div class="post-prev-next"> {dede:prenext get='pre'/}<br>
+          {dede:prenext get='next'/} </div>
+
+        <div class="related">
+          <h2>推荐产品</h2>
+          <ul class="piclist thumb-list">
+          {dede:arclist flag='h' row=2 infolen='230'}  
+            <li> <a href="[field:arcurl/]" title="VA15数字便携扩音器"> <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" class="thumb">
+              <h3>[field:title/]</h3>
+              </a>
+            </li>
+          {/dede:arclist}
+
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+  {dede:include filename='default/left.htm'/}
+  <div class="clearfix"> </div>
+</div>
+ {dede:include filename='default/footer.htm'/}
+</body>
+</html>
